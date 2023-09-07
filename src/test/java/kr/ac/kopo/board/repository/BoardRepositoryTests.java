@@ -73,6 +73,8 @@ public class BoardRepositoryTests {
     public void testRead3(){
         Object res = boardRepository.getBoardByBno(100L);
         Object[] arr = (Object[])res;
-        System.out.println(Arrays.toString(arr));
+//        System.out.println(Arrays.toString(arr));
+        for (Object a : arr)
+            System.out.println(a);
     }
 }

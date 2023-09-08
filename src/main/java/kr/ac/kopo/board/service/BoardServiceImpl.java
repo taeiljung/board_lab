@@ -29,12 +29,23 @@ public class BoardServiceImpl implements BoardService{
         repository.save(board);
         return board.getBno();
     }
+    @Override
+    public void modify(BoardDTO boardDTO) {
+        Board board = repository.getOne(boardDTO.getBno());
+        board.changeTitle(boardDTO.getTitle());
+        board.changeContent(boardDTO.getContent());
+        repository.save(board);
+    }
 
     @Override
     public PageResultDTO<BoardDTO, Object[]> getList(PageRequestDTO pageRequestDTO) {
         log.info(pageRequestDTO);
         Function<Object[], BoardDTO> fn = (en -> entityToDTO((Board)en[0], (Member)en[1],(Long)en[2]));
-        Page<Object[]> result = repository.getBoardWithReplyCount(
+//        Page<Object[]> result = repository.getBoardWithReplyCount(
+//                pageRequestDTO.getPageable(Sort.by("bno").descending()));
+        Page<Object[]> result = repository.searchPage(
+                pageRequestDTO.getType(),
+                pageRequestDTO.getKeyword(),
                 pageRequestDTO.getPageable(Sort.by("bno").descending()));
 
         return new PageResultDTO<>(result, fn);
@@ -54,11 +65,6 @@ public class BoardServiceImpl implements BoardService{
         repository.deleteById(bno);
     }
 
-    @Override
-    public void modify(BoardDTO boardDTO) {
-        Board board = repository.getOne(boardDTO.getBno());
-        board.changeTitle(boardDTO.getTitle());
-        board.changeContent(boardDTO.getContent());
-        repository.save(board);
-    }
+
+
 }

@@ -6,6 +6,7 @@ import kr.ac.kopo.board.dto.PageResultDTO;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 
 @SpringBootTest
@@ -42,10 +43,12 @@ public class BoardServiceTests {
         Long bno = 1L;
         boardService.removeWithReplies(bno);
     }
+
+    @Transactional
     @Test
     public void testModify(){
         BoardDTO boardDTO = BoardDTO.builder()
-                .bno(2L)
+                .bno(3L)
                 .title("제목 변경합니다.")
                 .content("내용 변경합니다.")
                 .build();

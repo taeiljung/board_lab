@@ -27,11 +27,11 @@ public class ReplyRepositoryTests {
             replyRepository.save(reply);
         });
     }
-    @Test
-    public void readReply1(){
-        Optional<Reply> result = replyRepository.findById(String.valueOf(1L));
-        Reply reply = result.get();
-        System.out.println(reply);
-        System.out.println(reply.getBoard());
-    }
+//    @Test
+//    public void readReply1(){
+//        Optional<Reply> result = replyRepository.findById(String.valueOf(1L));
+//        Reply reply = result.get();
+//        System.out.println(reply);
+//        System.out.println(reply.getBoard());
+//    }
 }

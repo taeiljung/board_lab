@@ -31,6 +31,7 @@ public class BoardController {
     public void register(){
         log.info("register get.....");
     }
+
     @PostMapping("/register")
     public String registerPost(BoardDTO dto, RedirectAttributes redirectAttributes){
         log.info("dto...." + dto);
@@ -54,7 +55,7 @@ public class BoardController {
         return "redirect:/board/list";
     }
     @PostMapping("/modify")
-    public String remove(BoardDTO dto, @ModelAttribute("requestDTO") PageRequestDTO requestDTO, RedirectAttributes redirectAttributes){
+    public String modify(BoardDTO dto, @ModelAttribute("requestDTO") PageRequestDTO requestDTO, RedirectAttributes redirectAttributes){
         log.info("post modify...........................");
         log.info("dto...." + dto);
         boardService.modify(dto);

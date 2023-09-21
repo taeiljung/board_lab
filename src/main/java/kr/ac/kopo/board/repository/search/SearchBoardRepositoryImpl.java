@@ -99,6 +99,7 @@ public class SearchBoardRepositoryImpl extends QuerydslRepositorySupport impleme
         log.info("Count : "+ count);
         return new PageImpl<Object[]>(
                 result.stream().map(t -> t.toArray()).collect(Collectors.toList()),pageable,count);
+                //2023-09-21 done
     }
 
 }

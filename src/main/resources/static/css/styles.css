@@ -4598,7 +4598,7 @@ textarea.form-control-lg {
   --bs-badge-padding-y: 0.35em;
   --bs-badge-font-size: 0.75em;
   --bs-badge-font-weight: 700;
-  --bs-badge-color: #fff;
+  --bs-badge-color: #000;
   --bs-badge-border-radius: 0.375rem;
   display: inline-block;
   padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
@@ -4611,6 +4611,29 @@ textarea.form-control-lg {
   vertical-align: baseline;
   border-radius: var(--bs-badge-border-radius);
 }
+
+.badge-info{
+  color: #000;
+  background: #0dcaf0;
+  border-color: #0dcaf0;
+}
+.badge-info:hover{
+  background: #31d2f2;
+  border-color: #25cff2;
+}
+
+
+.badge-secondary {
+  color: #000;
+  background: #6c757d;
+  border-color: #6c757d;
+}
+.badge-secondary:hover {
+  color: #000;
+  background: #5c636a;
+  border-color: #565e64;
+}
+
 .badge:empty {
   display: none;
 }

@@ -59,10 +59,10 @@ public class BoardController {
         log.info("post modify...........................");
         log.info("dto...." + dto);
         boardService.modify(dto);
-        redirectAttributes.addFlashAttribute("page", requestDTO.getPage());
-        redirectAttributes.addFlashAttribute("type", requestDTO.getType());
-        redirectAttributes.addFlashAttribute("keyword", requestDTO.getKeyword());
-        redirectAttributes.addFlashAttribute("bno", dto.getBno());
+        redirectAttributes.addAttribute("page", requestDTO.getPage());
+        redirectAttributes.addAttribute("type", requestDTO.getType());
+        redirectAttributes.addAttribute("keyword", requestDTO.getKeyword());
+        redirectAttributes.addAttribute("bno", dto.getBno());
         return "redirect:/board/read";
     }
 

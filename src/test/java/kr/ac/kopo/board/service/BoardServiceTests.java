@@ -40,7 +40,7 @@ public class BoardServiceTests {
     }
     @Test
     public void testRemove(){
-        Long bno = 1L;
+        Long bno = 15L;
         boardService.removeWithReplies(bno);
     }
 

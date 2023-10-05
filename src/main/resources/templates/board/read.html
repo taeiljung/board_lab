@@ -112,6 +112,12 @@
                     $(".modal-footer .btn").hide();
                     $(".replySave, .replyClose").show();
                 });
+                $(".close").click(function () {
+                    modal.modal('hide');
+                });
+                $(".replyClose").click(function () {
+                    modal.modal('hide');
+                });
                 $(".replySave").click(function() {
                     var reply = {
                         bno: bno,

@@ -2,7 +2,7 @@
 <html lang="en">
 <th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
   <th:block th:fragment="content">
-    <h1 class="mt-4"> board Modify Page </h1>
+    <h1 class="mt-4"> 글 수정 페이지 </h1>
     <form action="/board/modify" method="post">
       <input type="hidden" name="page" th:value="${requestDTO.page}">
       <input type="hidden" name="type" th:value="${requestDTO.type}">
@@ -33,9 +33,9 @@
         <input type="text" class="form-control" th:value="${#temporals.format(dto.modDate, 'yyyy/MM/dd HH:mm:ss')}" readonly>
       </div>
     </form>
-    <button type="button" class="btn btn-primary modifyBtn" >Modify</button>
-    <button type="button" class="btn btn-info listBtn" >List</button>
-    <button type="button" class="btn btn-danger removeBtn" >Remove </button>
+    <button type="button" class="btn btn-primary modifyBtn" >수정</button>
+    <button type="button" class="btn btn-info listBtn" >리스트로</button>
+    <button type="button" class="btn btn-danger removeBtn" >삭제 </button>
     <script th:inline="javascript">
       var actionForm = $("form");
       $(".removeBtn").click(function(){
@@ -43,7 +43,7 @@
         actionForm.submit();
       });
       $(".modifyBtn").click(function(){
-        if(!confirm("수정하시겠읍니까?")){
+        if(!confirm("수정 하시겠습니까?")){
           return ;
         }
         actionForm.attr("action","/board/modify")

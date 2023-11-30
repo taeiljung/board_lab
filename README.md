@@ -44,5 +44,15 @@
 </br>
 </br>
 
-  
+### 주요 기능 테스트
+![image](https://github.com/taeiljung/board_lab/assets/101981637/200a16e6-f5cc-4be0-834b-c1820ce26262)
+![image](https://github.com/taeiljung/board_lab/assets/101981637/986df7e1-5feb-4af3-a699-3c527ae9fcb6)
+![image](https://github.com/taeiljung/board_lab/assets/101981637/f9d4403a-c7a1-4be4-aee8-edb5d4ad9ed0)
+
+![image](https://github.com/taeiljung/board_lab/assets/101981637/0d4729af-4c2c-4787-92cd-4c94faef8686)
+![image](https://github.com/taeiljung/board_lab/assets/101981637/fd711c0d-0d37-492e-8705-5432bae80e71)
+regDate -> modDate 변동사항 확인
+
+
+
 
